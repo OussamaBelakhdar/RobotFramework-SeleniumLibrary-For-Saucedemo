@@ -22,4 +22,4 @@ jobs:
 
     - name: Run Robot Framework tests
       run: |
-        robot path/to/your/test/file.robot
+        robot /Users/oussama/Desktop/Robotframework/Saucedemo.robot
