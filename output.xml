@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20230824 12:06:29.070" rpa="false" schemaversion="4">
+<suite id="s1" name="Robotframework" source="/Users/oussama/Desktop/Robotframework">
+<suite id="s1-s1" name="Saucedemo" source="/Users/oussama/Desktop/Robotframework/Saucedemo.robot">
+<test id="s1-s1-t1" name="Authentification avec succès" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230824 12:06:29.147" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230824 12:06:29.147" endtime="20230824 12:07:09.003"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:09.005" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230824 12:07:09.003" endtime="20230824 12:07:09.108"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:09.108" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230824 12:07:09.121" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230824 12:07:09.143" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230824 12:07:09.108" endtime="20230824 12:07:09.143"/>
+</kw>
+<kw name="Click Button">
+<arg>login-button</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:09.143" level="INFO">Clicking element 'login-button'.</msg>
+<status status="PASS" starttime="20230824 12:07:09.143" endtime="20230824 12:07:09.188"/>
+</kw>
+<status status="PASS" starttime="20230824 12:07:09.143" endtime="20230824 12:07:09.188"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>inventory_container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230824 12:07:09.188" endtime="20230824 12:07:09.201"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>inventory_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230824 12:07:09.205" level="INFO">Current page contains element 'inventory_container'.</msg>
+<status status="PASS" starttime="20230824 12:07:09.201" endtime="20230824 12:07:09.205"/>
+</kw>
+<tag>Success</tag>
+<status status="PASS" starttime="20230824 12:06:29.147" endtime="20230824 12:07:09.205"/>
+</test>
+<test id="s1-s1-t2" name="Authentification avec un nom d’utilisateur vide et un mot de passe" line="20">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230824 12:07:09.206" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230824 12:07:09.206" endtime="20230824 12:07:11.778"/>
+</kw>
+<kw name="Click Button">
+<arg>login-button</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:11.779" level="INFO">Clicking element 'login-button'.</msg>
+<status status="PASS" starttime="20230824 12:07:11.779" endtime="20230824 12:07:11.811"/>
+</kw>
+<status status="PASS" starttime="20230824 12:07:11.778" endtime="20230824 12:07:11.811"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>error-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230824 12:07:17.025" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230824 12:07:17.025" level="FAIL">Element 'error-button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230824 12:07:11.811" endtime="20230824 12:07:17.029"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>error-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20230824 12:07:17.029" endtime="20230824 12:07:17.029"/>
+</kw>
+<tag>Error</tag>
+<status status="FAIL" starttime="20230824 12:07:09.206" endtime="20230824 12:07:17.029">Element 'error-button' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s1-t3" name="Authentification avec un nom d’utilisateur et un mot de passe vide" line="27">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230824 12:07:17.030" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230824 12:07:17.030" endtime="20230824 12:07:19.051"/>
+</kw>
+<kw name="Click Button">
+<arg>login-button</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:19.052" level="INFO">Clicking element 'login-button'.</msg>
+<status status="PASS" starttime="20230824 12:07:19.052" endtime="20230824 12:07:19.085"/>
+</kw>
+<status status="PASS" starttime="20230824 12:07:19.052" endtime="20230824 12:07:19.085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>error-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230824 12:07:24.312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230824 12:07:24.312" level="FAIL">Element 'error-button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230824 12:07:19.085" endtime="20230824 12:07:24.312"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>error-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20230824 12:07:24.312" endtime="20230824 12:07:24.312"/>
+</kw>
+<tag>Error</tag>
+<status status="FAIL" starttime="20230824 12:07:17.029" endtime="20230824 12:07:24.312">Element 'error-button' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s1-t4" name="Authentification avec un utilisateur bloqué" line="34">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230824 12:07:24.313" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230824 12:07:24.313" endtime="20230824 12:07:26.738"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>locked_out_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:26.740" level="INFO">Typing text 'locked_out_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230824 12:07:26.739" endtime="20230824 12:07:26.836"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:26.837" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230824 12:07:26.849" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230824 12:07:26.871" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230824 12:07:26.837" endtime="20230824 12:07:26.872"/>
+</kw>
+<kw name="Click Button">
+<arg>login-button</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230824 12:07:26.872" level="INFO">Clicking element 'login-button'.</msg>
+<status status="PASS" starttime="20230824 12:07:26.872" endtime="20230824 12:07:26.895"/>
+</kw>
+<status status="PASS" starttime="20230824 12:07:26.872" endtime="20230824 12:07:26.895"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>error-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230824 12:07:32.065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230824 12:07:32.065" level="FAIL">Element 'error-button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230824 12:07:26.895" endtime="20230824 12:07:32.065"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>error-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20230824 12:07:32.065" endtime="20230824 12:07:32.065"/>
+</kw>
+<tag>Error</tag>
+<status status="FAIL" starttime="20230824 12:07:24.312" endtime="20230824 12:07:32.065">Element 'error-button' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230824 12:06:29.078" endtime="20230824 12:07:32.066"/>
+</suite>
+<status status="FAIL" starttime="20230824 12:06:29.071" endtime="20230824 12:07:32.066"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="3" skip="0">Error</stat>
+<stat pass="1" fail="0" skip="0">Success</stat>
+</tag>
+<suite>
+<stat pass="1" fail="3" skip="0" id="s1" name="Robotframework">Robotframework</stat>
+<stat pass="1" fail="3" skip="0" id="s1-s1" name="Saucedemo">Robotframework.Saucedemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
